@@ -1,0 +1,29 @@
+<?xml version = "1.0" ?>
+<main-conf>
+    <!-- Moving hidden files may cause to reset your programs configurations, do not set hidden-files to true unless you're sure about it-->
+    <config hidden-files="false" delete-empty-directories="true" working-directory="/home/user">
+        <dir path="/home/usr1/Pictures">
+            .png|.svg|.jpg
+        </dir>
+
+        <ignore path="/home/user/Android"/>
+        <ignore path="/home/user/AndroidStudioProjects"/>
+        <ignore path="/home/user/snap"/>
+        <ignore path="/home/user/WebstormProjects"/>
+        <ignore path="/home/user/IdeaProjects"/>
+        <ignore path="/home/user/CLionProjects"/>
+    </config>
+<!--    <config hidden-files="false" delete-empty-directories="true" working-directory="/home/user">-->
+<!--        <dir path="/home/user/Archives">    -->
+<!--            .tar.xz|tar.gz|.zip|.rar    -->
+<!--        </dir>  -->
+
+<!--        <ignore path="/home/user/Android"/> -->
+<!--        <ignore path="/home/user/AndroidStudioProjects"/>-->
+<!--        <ignore path="/home/user/snap"/>-->
+<!--        <ignore path="/home/user/WebstormProjects"/>-->
+<!--        <ignore path="/home/user/IdeaProjects"/>-->
+<!--        <ignore path="/home/user/CLionProjects"/>-->
+<!--    </config>-->
+
+</main-conf>
