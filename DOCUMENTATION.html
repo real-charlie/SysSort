@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SysSort</title>
+    <style>
+        .intro-style {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            text-align: center;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .intro-normal {
+            background-color: #333333;
+            justify-content: flex-start;
+        }
+        .intro-padding {
+            padding-left: 20px;
+        }
+        .intro-tag {
+            background-color: #932823
+        }
+        .intro-attr {
+            background-color: #232893
+        }
+        .intro-single {
+            background-color: #289323
+        }
+    </style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; width: 100%;">
+    <div class="intro-style">
+        Simple Program For Sorting The File System
+    </div>
+    <div class="intro-style">
+        Program Accepts Only 1 Optional Argument And That Should Be Path Of XML Configuration File For This Program.
+        Otherwise, It Will Force On A File Named default.xmlgit
+    </div>
+    <div class="intro-style">
+        Let's Just Begin
+    </div>
+    <div class="intro-style intro-normal">
+        <div class="intro-padding">
+            XML Tags
+        </div>
+    </div>
+    <div class="intro-style intro-normal">
+        <div class="intro-padding">
+            There Are 4 Tags Has Defined By Default In SysSort:
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-tag">
+        <div class="intro-padding">
+            < main-conf > : The Root Tag Of All Configurations
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-tag">
+        <div style="padding-left: 50px">
+            < config > : Configurations For The Working Directory
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-tag" id="dir_tag">
+        <div class="intro-padding" style="padding-left: 80px">
+            < dir > : Configurations For The Target Directory
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-tag" id="ignore_tag">
+        <div class="intro-padding" style="padding-left: 80px">
+            < ignore > : Ignoring A Directory Or File From Any Actions
+        </div>
+    </div>
+    <div class="intro-style intro-normal">
+        <div class="intro-padding">
+            Now Let's Just Talk About Attributes
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-attr" id="config_wd">
+        <div class="intro-padding">
+            < config working-directory="" > : Required For Setting The Working Directory Of Configuration
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-attr">
+        <div class="intro-padding">
+            < config delete-empty-directories="true|false" > : Optional Attribute For Deleting The Empty Directories, It's A Boolean Attribute (Default Is False).
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-attr">
+        <div class="intro-padding">
+            < config hidden-files="true|false" > : Optional Attribute For Including Hidden Files In Actions (Default Is False).
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-attr">
+        <div class="intro-padding">
+            < dir|ignore path="" > : <a href="#dir_tag">< dir ></a> Or <a href="#ignore_tag">< ignore ></a> Both Will Use path For Their Action ( Which Has Defined )
+        </div>
+    </div>
+    <div class="intro-style intro-normal">
+        <div class="intro-padding">
+            Now Let's Talk About < dir >
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-single">
+        <div class="intro-padding">
+            < dir > < / dir > : Accepts A Body That Contains File Extensions To Move From Working Directory Specified In <a href="#config_wd">< config ></a>
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-single">
+        <div class="intro-padding">
+            <p style="color: red">< dir path="/home/me/Pictures" > .gif|.jpg|.png|.svg < / dir ></p> Each Extension Specified Will Separate With A | Then All Files In Working Directory With One Of These Extensions Will Move Here.
+        </div>
+    </div>
+    <div class="intro-style intro-normal intro-single">
+        <div class="intro-padding">
+            <p style="color: red">< dir path="/home/me/Pictures/France" > -france.gif|-france.jpg|-france.png|-france.svg < / dir ></p>
+            You Can Also Specify A Name Or Whatever You Want Before The Extension, Then It Will Move All Files Contains -france.svg.
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
